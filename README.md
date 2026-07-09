@@ -1,202 +1,157 @@
-# 📈 Time Series Forecasting Model & Advanced Model Interpretability Dashboard
+# 📈 Time Series Forecasting Dashboard
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
-![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?logo=streamlit)
-![SARIMA](https://img.shields.io/badge/Model-SARIMA-green)
-![SHAP](https://img.shields.io/badge/Interpretability-SHAP-orange)
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
+![SARIMA](https://img.shields.io/badge/Forecasting-SARIMA-green)
+![SHAP](https://img.shields.io/badge/Explainability-SHAP-orange)
 ![License](https://img.shields.io/badge/License-Educational-lightgrey)
 
----
-
-## 📌 Project Overview
-
-The **Time Series Forecasting Model & Advanced Model Interpretability Dashboard** is an end-to-end Data Science project designed to forecast future business trends using the **SARIMA (Seasonal AutoRegressive Integrated Moving Average)** model. The project also incorporates **SHAP (SHapley Additive Explanations)** to provide transparent model interpretability by identifying the contribution of key features to predictions.
-
-To enhance usability, an **interactive Streamlit dashboard** has been developed, allowing users to explore historical data, visualize forecasts, inspect confidence intervals, and analyze feature importance through an intuitive web interface.
-
-This project demonstrates the complete machine learning workflow, including data preprocessing, exploratory data analysis, stationarity testing, seasonal decomposition, forecasting, explainability, and interactive visualization.
+An end-to-end **Time Series Forecasting Dashboard** developed using **Python, SARIMA, Streamlit, Plotly, and SHAP** to analyze historical business sales data, forecast future trends, and improve model interpretability through interactive visualizations.
 
 ---
 
-# 🎯 Objectives
+# 📌 Project Overview
 
-- Analyze historical time-series data.
-- Detect trends and seasonality.
-- Perform stationarity testing using the Augmented Dickey-Fuller Test.
-- Apply seasonal differencing.
-- Train a SARIMA forecasting model.
-- Predict future business values with confidence intervals.
-- Interpret model behavior using SHAP.
-- Build an interactive Streamlit dashboard.
-- Export forecast reports and visualizations.
+Time Series Forecasting plays an important role in business planning by helping organizations estimate future trends based on historical data. This project demonstrates a complete forecasting workflow, starting from data preprocessing and exploratory analysis to model training, future prediction, and explainability.
+
+The forecasting model is built using **SARIMA (Seasonal AutoRegressive Integrated Moving Average)** to capture trend and seasonality within historical sales data. To improve model transparency, **SHAP (SHapley Additive Explanations)** is integrated to highlight feature contributions and support better interpretation of forecasting results.
+
+The project also includes a responsive **Streamlit dashboard**, allowing users to explore datasets, visualize trends, generate forecasts, review model insights, and download forecasting results through an interactive interface.
 
 ---
 
 # 🚀 Key Features
 
-- 📊 Historical Time Series Analysis
-- 📈 SARIMA Forecasting Model
-- 📉 Confidence Interval Prediction
-- 🔍 Stationarity Testing (ADF Test)
-- 🔄 Seasonal Decomposition
-- 🧠 SHAP Explainability
-- 📋 Feature Importance Analysis
-- 🌐 Interactive Streamlit Dashboard
-- 📊 Interactive Plotly Charts
-- 📁 Automated Report Generation
-- 💾 Forecast CSV Export
-- 🎨 Professional Project Structure
-- 🚀 GitHub Portfolio Ready
+- Historical Time Series Analysis
+- Data Preprocessing and Cleaning
+- Stationarity Testing (ADF Test)
+- Seasonal Decomposition
+- Seasonal Differencing
+- SARIMA Forecasting Model
+- Future Sales Prediction
+- Forecast Performance Evaluation
+- SHAP-Based Model Explainability
+- Interactive Streamlit Dashboard
+- Interactive Plotly Visualizations
+- Downloadable Forecast Reports
+- Organized Project Structure
 
 ---
 
-# 🛠️ Tech Stack
+# 🛠️ Technologies Used
 
 | Category | Technologies |
 |----------|--------------|
 | Programming Language | Python 3.12 |
-| Data Analysis | Pandas, NumPy |
-| Visualization | Matplotlib, Seaborn, Plotly |
+| Data Processing | Pandas, NumPy |
+| Data Visualization | Matplotlib, Plotly |
 | Forecasting | Statsmodels (SARIMA) |
 | Machine Learning | Scikit-learn |
 | Explainability | SHAP |
 | Dashboard | Streamlit |
-| Development | VS Code, Jupyter Notebook |
+| Development Tools | VS Code, Jupyter Notebook |
 
 ---
-
 # 📂 Project Structure
 
 ```text
-Time-Series-Forecasting/
+Time-Series-Forecasting-Dashboard/
 │
-├── data/
-│   └── business_time_series.csv
-│
-├── src/
-│   ├── train.py
-│   ├── forecast.py
-│   └── interpretability.py
-│
-├── models/
-│   └── sarima_model.pkl
+├── app.py                          # Streamlit dashboard
+├── train.py                        # Model training pipeline
+├── forecast.py                     # Future forecasting
+├── interpretability.py             # SHAP explainability
+├── business_time_series.csv        # Input dataset
+├── requirements.txt                # Project dependencies
+├── README.md                       # Project documentation
 │
 ├── outputs/
+│   ├── time_series_plot.png
+│   ├── rolling_mean.png
+│   ├── seasonal_difference.png
+│   ├── seasonal_decomposition.png
+│   ├── acf_plot.png
+│   ├── pacf_plot.png
 │   ├── forecast_plot.png
+│   ├── future_forecast.png
 │   ├── forecast_results.csv
 │   ├── future_forecast.csv
+│   ├── metrics.txt
+│   ├── forecast_summary.txt
 │   ├── shap_summary.png
 │   ├── shap_feature_importance.png
-│   ├── feature_importance.csv
-│   └── metrics.txt
+│   └── feature_importance.csv
 │
-├── app.py
-├── notebook.ipynb
-├── requirements.txt
-├── README.md
-└── .gitignore
+└── models/
+    └── sarima_model.pkl
 ```
 
 ---
 
-# 📊 Workflow
+# 📊 Project Workflow
 
-1. Load historical business dataset
-2. Data preprocessing
-3. Exploratory Data Analysis (EDA)
-4. Stationarity Testing (ADF Test)
-5. Seasonal Decomposition
-6. Seasonal Differencing
-7. SARIMA Model Training
-8. Performance Evaluation
-9. Future Forecasting
-10. Confidence Interval Estimation
-11. SHAP Model Explainability
-12. Interactive Streamlit Dashboard
-13. Export Results
+The project follows a structured forecasting workflow:
+
+1. Load the historical business sales dataset.
+2. Perform data cleaning and preprocessing.
+3. Conduct exploratory data analysis (EDA).
+4. Visualize historical sales trends.
+5. Check stationarity using the Augmented Dickey-Fuller (ADF) Test.
+6. Apply seasonal differencing where required.
+7. Train the SARIMA forecasting model.
+8. Evaluate forecasting performance using standard metrics.
+9. Generate future sales forecasts.
+10. Interpret model predictions using SHAP.
+11. Display results through an interactive Streamlit dashboard.
+12. Export forecast reports, visualizations, and evaluation metrics.
 
 ---
 
 # 📈 Forecasting Model
 
-### SARIMA (Seasonal ARIMA)
+The forecasting pipeline is built using the **SARIMA (Seasonal AutoRegressive Integrated Moving Average)** model, which is well-suited for time series data containing both trend and seasonal patterns.
 
-The project utilizes the **SARIMA** model to capture trend and seasonality within historical business data and generate accurate future forecasts.
+The trained model is used to forecast future business sales while preserving seasonal behavior and long-term trends observed in the historical dataset.
 
 ---
 
-# 🧠 Model Interpretability
+# 🧠 Model Explainability
 
-To improve transparency and trust in the forecasting process, the project integrates **SHAP (SHapley Additive Explanations)** for feature importance analysis.
+To improve model transparency, this project integrates **SHAP (SHapley Additive Explanations)** for explainability.
 
-Generated outputs include:
+The explainability module helps users understand how features contribute to model predictions by generating:
 
 - SHAP Summary Plot
 - SHAP Feature Importance Plot
+- Feature Importance Report
 - Feature Importance CSV
+
+These visualizations make the forecasting process more interpretable and easier to analyze.
 
 ---
 
-# 📊 Performance Evaluation
+# 📉 Model Evaluation
 
-Model performance is evaluated using:
+The forecasting model is evaluated using the following performance metrics:
 
 - Mean Absolute Error (MAE)
 - Root Mean Squared Error (RMSE)
 - Mean Absolute Percentage Error (MAPE)
 
----
-
-# 🌐 Interactive Streamlit Dashboard
-
-The project includes a fully interactive **Streamlit Dashboard** that enables users to explore forecasting results through an intuitive graphical interface.
-
-### Dashboard Features
-
-- 🏠 Home Dashboard
-- 📊 Dataset Preview
-- 📈 Historical Sales Visualization
-- 🔮 Future Forecast
-- 📉 Confidence Interval Visualization
-- 🧠 SHAP Interpretability
-- 📋 Feature Importance Analysis
-- 📥 Forecast CSV Download
-- 📊 Interactive Plotly Charts
-- 📱 Responsive User Interface
-
----
-
-# 📷 Generated Outputs
-
-The project automatically generates:
-
-- Time Series Plot
-- Rolling Mean Plot
-- Seasonal Decomposition
-- Seasonal Difference Plot
-- ACF Plot
-- PACF Plot
-- Forecast Plot
-- Forecast CSV
-- SHAP Summary Plot
-- SHAP Feature Importance Plot
-- Feature Importance Report
-- Performance Metrics Report
-
----
+These metrics help measure forecasting accuracy and overall model performance.
 
 # 🚀 Installation
 
 Clone the repository
 
 ```bash
-git clone https://github.com/your-username/time-series-forecasting-dashboard.git
+git clone https://github.com/haniaeman2026-pixel/Time-Series-Forecasting-Dashboard.git
 ```
 
-Navigate to the project folder
+Navigate to the project directory
 
 ```bash
-cd time-series-forecasting-dashboard
+cd Time-Series-Forecasting-Dashboard
 ```
 
 Create a virtual environment
@@ -213,7 +168,13 @@ Activate the virtual environment
 venv\Scripts\activate
 ```
 
-Install dependencies
+### Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+Install the required packages
 
 ```bash
 pip install -r requirements.txt
@@ -221,33 +182,33 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Run the Project
+# ▶️ Running the Project
 
 ### Train the Forecasting Model
 
 ```bash
-python src/train.py
+python train.py
 ```
 
-### Generate Forecast
+### Generate Future Forecast
 
 ```bash
-python src/forecast.py
+python forecast.py
 ```
 
 ### Generate SHAP Explainability
 
 ```bash
-python src/interpretability.py
+python interpretability.py
 ```
 
-### Launch Streamlit Dashboard
+### Launch the Streamlit Dashboard
 
 ```bash
 streamlit run app.py
 ```
 
-The dashboard will open automatically at:
+After running the application, open your browser and visit:
 
 ```text
 http://localhost:8501
@@ -255,50 +216,170 @@ http://localhost:8501
 
 ---
 
-# 📊 Results
+# 🌐 Streamlit Dashboard
 
-The project provides:
+The project includes an interactive Streamlit dashboard that provides a simple and user-friendly interface for exploring forecasting results.
 
-- Historical Trend Analysis
-- Future Business Forecast
-- Confidence Interval Prediction
-- Interactive Forecast Dashboard
+### Dashboard Modules
+
+- 🏠 Dashboard
+- 📊 Dataset Explorer
+- 📈 Historical Analysis
+- 🔮 Future Forecast
+- 🧠 Model Explainability
+- 📥 Download Center
+- ⚙️ Settings
+- 👩 About
+
+---
+
+# 📊 Dashboard Highlights
+
+The dashboard provides:
+
+- Interactive KPI Cards
+- Historical Sales Visualization
+- Forecast Comparison Charts
 - SHAP Explainability
 - Feature Importance Analysis
-- Forecast Reports
+- Forecast Result Table
+- CSV Download Support
+- Interactive Plotly Charts
+
+---
+
+# 📷 Project Outputs
+
+The project automatically generates the following outputs:
+
+### Visualizations
+
+- Time Series Plot
+- Rolling Mean Plot
+- Seasonal Decomposition
+- Seasonal Difference Plot
+- ACF Plot
+- PACF Plot
+- Forecast Plot
+- Future Forecast Plot
+- SHAP Summary Plot
+- SHAP Feature Importance Plot
+
+### Reports
+
+- Forecast Results (CSV)
+- Future Forecast (CSV)
+- Forecast Summary
 - Performance Metrics
-- Interactive Visualizations
+- Feature Importance Report
 
 ---
 
 # 📸 Dashboard Preview
 
-> Add your Streamlit dashboard screenshot here after running the application.
+After running the Streamlit application, add a screenshot of your dashboard here.
 
 ```text
-outputs/dashboard_preview.png
+assets/dashboard_preview.png
 ```
+
+> **Tip:** Upload a screenshot of your dashboard to an `assets/` folder and replace the placeholder above with:
+
+```markdown
+![Dashboard Preview](assets/dashboard_preview.png)
+```
+---
+
+# 💡 Future Improvements
+
+The project can be extended with additional features, including:
+
+- Support for multiple forecasting models (ARIMA, Prophet, LSTM)
+- User-uploaded datasets
+- Automatic hyperparameter tuning
+- Real-time forecasting
+- Cloud deployment using Streamlit Community Cloud
+- REST API integration with FastAPI
+- Interactive forecasting controls
+- Advanced dashboard analytics
+- Automated model retraining
+- Docker containerization
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+If you would like to improve this project, feel free to:
+
+1. Fork the repository
+2. Create a new feature branch
+3. Commit your changes
+4. Push the branch
+5. Open a Pull Request
+
+Suggestions, improvements, and feedback are always appreciated.
 
 ---
 
 # 👩‍💻 Author
 
-**Hania Eman**
+## Hania Eman
 
-**Aspiring AI | Machine Learning | Data Science Engineer**
+Aspiring Artificial Intelligence, Machine Learning, and Data Science Engineer
 
-- Python Developer
-- Machine Learning Enthusiast
-- Data Science Learner
-- Time Series Forecasting Projects
-- Streamlit Dashboard Development
+### Connect with Me
+
+- 💼 LinkedIn: *Add your LinkedIn profile*
+- 💻 GitHub: https://github.com/haniaeman2026-pixel
 
 ---
 
 # 📄 License
 
-This project is developed for educational, research, and internship portfolio purposes.
+This project is developed for educational purposes, portfolio development, and internship submissions.
+
+You are welcome to explore, learn from, and build upon this project with appropriate attribution.
 
 ---
 
-⭐ If you found this project useful, consider giving it a **Star** on GitHub!
+# 🙏 Acknowledgements
+
+Special thanks to the open-source community and the developers of the following libraries and frameworks:
+
+- Python
+- Pandas
+- NumPy
+- Statsmodels
+- Scikit-learn
+- SHAP
+- Plotly
+- Streamlit
+
+Their excellent tools made this project possible.
+
+---
+
+# ⭐ Support
+
+If you found this project helpful or interesting:
+
+⭐ Star this repository
+
+🍴 Fork the project
+
+📝 Share your feedback
+
+Your support is greatly appreciated.
+
+---
+
+## 📌 Project Summary
+
+**Time Series Forecasting Dashboard** is a complete forecasting application that combines statistical modeling, data visualization, model interpretability, and an interactive web interface. It demonstrates practical implementation of time series forecasting using SARIMA while providing clear insights through SHAP explainability and a user-friendly Streamlit dashboard.
+
+This project reflects best practices in data analysis, forecasting, visualization, and application development, making it suitable for learning, portfolio presentation, and internship showcases.
+
+---
+
